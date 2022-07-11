@@ -1,2 +1,2 @@
-# react-focused-test
+# React focused test
 I answer some questions about Javascript, CSS and React
