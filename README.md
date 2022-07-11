@@ -6,7 +6,9 @@ I answer some questions about Javascript, CSS and React
 
 Optional chaining.
 You can reduce the words you type when you to validate if a key exists in a object. For example: 
-```const person = { address : { postcode: 06710 } }```
+```javascript
+    const person = { address : { postcode: 06710 } }
+```
 
 * Explain an interesting way in which you have used this javascript feature.
 * Is there any difference between regular function syntax and the shorter arrow function syntax? (Write the answer in your own words)
