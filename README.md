@@ -43,4 +43,7 @@ Functions are orientend to mere functions as small parts of logic (micro) that c
   `!important` can be used to break the css specificity and obligates with no restrictions to apply the property specified with `!important!`.
   
 * What is your prefered layout system: inline-block, floating + clearing, flex, grid, other?  And why?
+
+  Flex and I think because it's more fun and with a few props as `display`, `justify-content` and `align-items` you can create easily the main UI's layouts.
+ 
 * Are negative margins legal and what do they do (margin: -20px)?
