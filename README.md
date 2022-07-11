@@ -46,4 +46,21 @@ Functions are orientend to mere functions as small parts of logic (micro) that c
 
   Flex and I think because it's more fun and with a few props as `display`, `justify-content` and `align-items` you can create easily the main UI's layouts.
  
-* Are negative margins legal and what do they do (margin: -20px)?
+### Unit tests ###
+
+* What technologies do you use to unit test your react components?
+
+  I use `@testing-library/react`. Jest. Snapshots. 
+  
+* How do you test in your unit tests to see if the correct properties are being passed to child components.
+
+  We can use the `objectContaining` or `toMatchObject` functions to validate the props is receiving a component. For example:
+  
+  ````javascript
+  const expectedProps = {
+    id: '123',
+    name: "Client"
+  };
+  const result = rendererResult.root.findByType(Avatar);
+  
+  expect(result.props).objectContaining(expectedProps);
