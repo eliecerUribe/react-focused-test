@@ -8,6 +8,12 @@ Optional chaining.
 You can reduce the words you type when you to validate if a key exists in a object. For example: 
 ```javascript
     const person = { address : { postcode: 06710 } }
+    
+    // old way
+    if (person && person.address && person.address.postcode) {}
+
+    // with optional chaining
+    if (person?.address?.postcode) {}
 ```
 
 * Explain an interesting way in which you have used this javascript feature.
