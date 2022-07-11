@@ -4,8 +4,10 @@ I answer some questions about Javascript, CSS and React
 ### Javascript ###
 * What is your favourite new javascript feature and why?
 
-Optional chaining.
-You can reduce the words you type when you to validate if a key exists in a object. For example: 
+Optional chaining because you can reduce the words you type when validating if a key exists in an object.
+
+* Explain an interesting way in which you have used this javascript feature.
+ For example: 
 ```javascript
     const person = { address : { postcode: 06710 } }
     
@@ -16,7 +18,6 @@ You can reduce the words you type when you to validate if a key exists in a obje
     if (person?.address?.postcode) {}
 ```
 
-* Explain an interesting way in which you have used this javascript feature.
 * Is there any difference between regular function syntax and the shorter arrow function syntax? (Write the answer in your own words)
 * What is the difference between ‘myFunctionCall(++foo)’   and  ‘myFunctionCall(foo++)’
 * In your own words, explain what a javascript ‘class’ is and how it differs from a function.
