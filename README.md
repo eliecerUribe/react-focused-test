@@ -39,6 +39,7 @@ Functions are orientend to mere functions as small parts of logic (micro) that c
   For example `id > class > direct reference of the element in the DOM (div, p, span)`
   
 * In your own words, explain, what is ‘!important’ in css.  Also how does it work?  Are there any special circumstances when using it, where it’s behaviour might not be what you expect?
+
   `!important` can be used to break the css specificity and obligates with no restrictions to apply the property specified with `!important!`.
   
 * What is your prefered layout system: inline-block, floating + clearing, flex, grid, other?  And why?
