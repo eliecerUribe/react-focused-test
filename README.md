@@ -64,3 +64,29 @@ Functions are orientend to mere functions as small parts of logic (micro) that c
   const result = rendererResult.root.findByType(Avatar);
   
   expect(result.props).objectContaining(expectedProps);
+    ````
+  ### React ###
+  
+  Create a react component that has a <div/> with a border.
+  Inside this <div/> should be a <span/> that displays the ‘live’ width of the browser window at all times.  Keep in mind that the size of the window       could easily be changed by the user and you should reflect this.
+  
+  ````javascript
+  import React, { useState, useEffect } from "react";
+
+  const myComponent = () => {
+    const [width, setWidth] = useState(window.innerWidth);
+    
+    useEffect(() => {
+      const handleResize = () => setWidth(window.innerWidth);
+      window.addEventListener("resize", handleResize);
+      
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }, []);
+    
+    return (<div><span>My window size {width}</span></div>)
+  }
+   
+
+   
