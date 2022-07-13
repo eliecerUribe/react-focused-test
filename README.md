@@ -67,8 +67,8 @@ Functions are orientend to mere functions as small parts of logic (micro) that c
     ````
   ### React ###
   
-  Create a react component that has a <div/> with a border.
-  Inside this <div/> should be a <span/> that displays the ‘live’ width of the browser window at all times.  Keep in mind that the size of the window       could easily be changed by the user and you should reflect this.
+  Create a react component that has a `<div/>` with a border.
+  Inside this `<div/>` should be a `<span/>` that displays the ‘live’ width of the browser window at all times.  Keep in mind that the size of the window could easily be changed by the user and you should reflect this.
   
   ````javascript
   import React, { useState, useEffect } from "react";
