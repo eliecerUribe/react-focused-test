@@ -89,7 +89,7 @@ Functions are orientend to mere functions as small parts of logic (micro) that c
   }
   ````
   
-  Inside the <div/> you created in the previous step, add a text input that, as a number is entered into it, uses that number to set the height of the     div itself in pixels, live as you update the text field (keypress not change event).
+  Inside the `<div/>` you created in the previous step, add a text input that, as a number is entered into it, uses that number to set the height of the div itself in pixels, live as you update the text field (keypress not change event).
   
   ````javascript
   import React, { useState, useEffect } from "react";
