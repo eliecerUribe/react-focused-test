@@ -87,6 +87,39 @@ Functions are orientend to mere functions as small parts of logic (micro) that c
     
     return (<div><span>My window size {width}</span></div>)
   }
+  ````
+  
+  Inside the <div/> you created in the previous step, add a text input that, as a number is entered into it, uses that number to set the height of the     div itself in pixels, live as you update the text field (keypress not change event).
+  
+  ````javascript
+  import React, { useState, useEffect } from "react";
+
+  const myComponent = () => {
+    const [width, setWidth] = useState(window.innerWidth);
+    const [divHeight, setDivHeight] = useState(0);
+    
+    const handleOnChange = (e) => {
+      setDivHeight(e.target.value);
+    }
+    
+    useEffect(() => {
+      const handleResize = () => setWidth(window.innerWidth);
+      window.addEventListener("resize", handleResize);
+      
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }, []);
+    
+    return (
+      <div style={{ height: `${divHeight}rem` }}>
+        <span>My window size {width}</span>
+        <input type="text" onChange={(e) => handleOnChange(e)} />
+      </div>
+    )
+  }
+  ````
+
    
 
    
