@@ -144,6 +144,7 @@ Functions are orientend to mere functions as small parts of logic (micro) that c
     useEffect(() => {
       const handleResize = () => setWidth(window.innerWidth);
       window.addEventListener("resize", handleResize);
+      
       return () => {
         window.removeEventListener("resize", handleResize);
       };
