@@ -119,6 +119,55 @@ Functions are orientend to mere functions as small parts of logic (micro) that c
     )
   }
   ````
+  Add the following code to your project root (same project as in step 2, but add the code in the global / window space):  
+
+  ````javascript
+  let divHeight;
+  window.setDivHeight = (height) => divHeight = height;
+  ````
+
+  Add a HOC for your div component that allows you to set the height of your <div/> component from the previous steps by calling that external function.
+  
+   ````javascript
+  let divHeight = 0;
+  window.setDivHeight = (height) => (divHeight = height);
+
+  const MyCompnent = ({ setDivHeight }) => {
+    const [width, setWidth] = useState(window.innerWidth);
+    const [newDivHeight, setNewDivHeight] = useState();
+
+    const handleOnChange = (e) => {
+      setDivHeight(e.target.value);
+      setNewDivHeight(divHeight);
+    };
+
+    useEffect(() => {
+      const handleResize = () => setWidth(window.innerWidth);
+      window.addEventListener("resize", handleResize);
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    });
+
+    return (
+      <div style={{ height: `${newDivHeight}rem` }}>
+        <span>My window size {width}</span>
+        <input type="text" onChange={(e) => handleOnChange(e)} />
+      </div>
+    );
+  };
+
+  const withHighOrderComponent = (Component) => (props) => {
+    return <Component setDivHeight={window.setDivHeight} {...props} />;
+  };
+
+  const WrappedComponent = withHighOrderComponent(MyCompnent);
+
+  const App = () => {
+    return <WrappedComponent />;
+  };
+  ````
+
 
    
 
