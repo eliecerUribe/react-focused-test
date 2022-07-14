@@ -159,13 +159,13 @@ Functions are orientend to mere functions as small parts of logic (micro) that c
   };
 
   const withHighOrderComponent = (Component) => (props) => {
-    return <Component setDivHeight={window.setDivHeight} {...props} />;
+    return <Component {...props} />;
   };
 
   const WrappedComponent = withHighOrderComponent(MyCompnent);
 
   const App = () => {
-    return <WrappedComponent />;
+    return <WrappedComponent setDivHeight={window.setDivHeight} />;
   };
   ````
 
