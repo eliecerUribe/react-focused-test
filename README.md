@@ -94,7 +94,7 @@ Functions are orientend to mere functions as small parts of logic (micro) that c
   ````javascript
   import React, { useState, useEffect } from "react";
 
-  const myComponent = () => {
+  const MyComponent = () => {
     const [width, setWidth] = useState(window.innerWidth);
     const [divHeight, setDivHeight] = useState(0);
     
