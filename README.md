@@ -126,7 +126,7 @@ Functions are orientend to mere functions as small parts of logic (micro) that c
   window.setDivHeight = (height) => divHeight = height;
   ````
 
-  Add a HOC for your div component that allows you to set the height of your <div/> component from the previous steps by calling that external function.
+  Add a HOC for your div component that allows you to set the height of your `<div/>` component from the previous steps by calling that external function.
   
    ````javascript
   let divHeight = 0;
